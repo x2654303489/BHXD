@@ -1,0 +1,36 @@
+spring.application.name: Bhxd
+server.port: 6021
+spring:
+  datasource:
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    # 密钥 820916ef951cba27
+    url: mpw:sdFGWtsDXO1QRsyg6/qMu7WPz66sKaMojMb/88zMgstzxNDrH/4qN1+3ddVQzhrLrRzeu65IdWjKggKyLe0Wr7SJCtCW6OGJcaXubiCGqx8=
+    username: mpw:UysYyZUgiQpX8brd26M/yQ==
+    password: mpw:LQykWRhOxcHW7ID4gr9oLg==
+  jpa:
+    hibernate:
+      ddl-auto: update # 考虑生产环境中使用validate或none
+    show-sql: true
+    properties:
+      hibernate:
+
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-field: enabled
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+
+logging:
+  level:
+    com.p6spy: DEBUG
+    #spring:
+    #  datasource:
+    #    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    #    url: jdbc:p6spy:h2:mem:test
+    # 其他数据库配置...
+#      schema-locations: classpath:sql/user_account.sql
+#      mode: always
+#打印sql语句日志

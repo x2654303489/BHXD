@@ -1,0 +1,7 @@
+CREATE TABLE sys_role (
+      `id` INT NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+      `role_name` VARCHAR(20) NOT NULL DEFAULT 'NULL' COMMENT '菜单名',
+      `status` tinyint(1) default 0 comment '菜单状态（0正常 1停用）',
+      `create_time` DATETIME DEFAULT CURRENT_TIMESTAMP,
+      `update_time` DATETIME
+);

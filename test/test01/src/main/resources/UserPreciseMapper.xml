@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.test01.mapper.UserPreciseMapper">
+    <resultMap id="UserPreciseDTOMap" type="com.example.test01.model.UserAccount">
+        <!--        <result property="username" column="username" />-->
+        <!--        <result property="phone" column="phone" />-->
+        <!-- 如果有更多属性需要映射，继续添加 -->
+    </resultMap>
+
+    <select id="getUserPreciseWithUsernameAndPhone" resultMap="UserPreciseDTOMap">
+        SELECT u.username, up.*
+        FROM user_account u
+        INNER JOIN user_precise up ON u.id = up.id
+        WHERE 1=1
+        <if test="username != null">
+            AND u.username = #{username}
+        </if>
+    </select>
+    <select id="testx" resultType="com.example.test01.model.UserAccount">
+        SELECT *
+        FROM user_account u
+    </select>
+</mapper>

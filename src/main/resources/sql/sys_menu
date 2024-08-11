@@ -1,0 +1,9 @@
+CREATE TABLE sys_menu (
+  `id` INT NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+  `menu_name` VARCHAR(20) NOT NULL DEFAULT 'NULL' COMMENT '菜单名',
+  `status` tinyint(1) default 0 comment '菜单状态（0正常 1停用）',
+  `is_delete` tinyint(1) default 0 comment '菜单状态（0未删除 1删除）',
+  `perms` VARCHAR(20) NOT NULL comment '权限',
+    `create_time` DATETIME DEFAULT CURRENT_TIMESTAMP,
+    `update_time` DATETIME
+ );

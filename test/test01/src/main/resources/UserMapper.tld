@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.test01.mapper.UserMapper">
+
+    <!-- 定义 resultMap（如果 User 类有复杂的属性关系，则需要；否则可以省略） -->
+    <!--
+    <resultMap id="UserMap" type="com.example.test01.model.User">
+        <result property="id" column="id" />
+        <result property="username" column="username" />
+    </resultMap>
+    -->
+
+    <!-- 定义一个简单的查询 -->
+    <!--    <select id="findUsers" resultType="com.example.test01.model.User">-->
+    <!--        SELECT * FROM user-->
+    <!--    </select>-->
+    <select id="findUserById" resultType="com.example.test01.model.User">
+        SELECT id, username FROM user WHERE id = #{id}
+    </select>
+    <!-- 如果你不想在接口中使用注解，可以取消上面 @Select 注解的查询，并使用这个 -->
+
+</mapper>

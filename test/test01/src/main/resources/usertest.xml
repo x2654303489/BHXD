@@ -1,0 +1,30 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xsi:schemaLocation="-->
+<!--           http://www.springframework.org/schema/beans-->
+<!--           http://www.springframework.org/schema/beans/spring-beans.xsd-->
+<!--           http://mybatis.org/schema/mybatis-spring-->
+<!--           http://mybatis.org/schema/mybatis-spring.xsd">-->
+
+<!--    &lt;!&ndash; Spring 数据源和其他相关配置... &ndash;&gt;-->
+
+<!--    &lt;!&ndash; MyBatis 的 SqlSessionFactoryBean 配置 &ndash;&gt;-->
+<!--    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">-->
+<!--        <property name="dataSource" ref="dataSource"/>-->
+<!--        &lt;!&ndash; 指定 MyBatis 的全局配置文件位置（如果需要的话），但在与 Spring 集成时通常不需要 &ndash;&gt;-->
+<!--        &lt;!&ndash; <property name="configLocation" value="classpath:mybatis-config.xml"/> &ndash;&gt;-->
+<!--        &lt;!&ndash; 指定 Mapper XML 映射文件位置 &ndash;&gt;-->
+<!--        <property name="mapperLocations" value="classpath:com/example/test01/mapper/*.xml"/>-->
+<!--    </bean>-->
+
+<!--    &lt;!&ndash; Mapper 扫描器配置 &ndash;&gt;-->
+<!--    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
+<!--        <property name="basePackage" value="com.example.test01.mapper"/>-->
+<!--        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>-->
+
+<!--    </bean>-->
+
+<!--    &lt;!&ndash; 其他 Spring beans 配置... &ndash;&gt;-->
+
+<!--</beans>-->
